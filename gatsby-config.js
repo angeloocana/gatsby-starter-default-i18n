@@ -1,6 +1,12 @@
+var defaultLangKey = 'en';
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
+    languages: {
+      defaultLangKey: defaultLangKey,
+      langs: ['en', 'pt']
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -8,7 +14,7 @@ module.exports = {
       resolve: 'gatsby-plugin-i18n',
       options: {
         langKeyForNull: 'any',
-        langKeyDefault: 'en',
+        langKeyDefault: defaultLangKey,
         useLangKeyLayout: false
       }
     }],
