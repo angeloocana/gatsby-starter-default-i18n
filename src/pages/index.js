@@ -1,13 +1,30 @@
-import React from 'react'
-import Link from 'gatsby-link'
+import React from 'react';
+import graphql from 'graphql';
+import { redirectToHome } from 'ptz-i18n';
 
-const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
-)
+class RedirectIndex extends React.PureComponent {
+  constructor(args) {
+    super(args);
+    const { langs, defaultLangKey } = args.data.site.siteMetadata.languages;
+    redirectToHome(langs, defaultLangKey);
+  }
 
-export default IndexPage
+  render() {
+    return (<div />);
+  }
+}
+
+export default RedirectIndex;
+
+export const pageQuery = graphql`
+  query IndexQuery {    
+    site{
+      siteMetadata{
+        languages {
+          defaultLangKey
+          langs
+        }
+      }
+    }
+  }
+`;
