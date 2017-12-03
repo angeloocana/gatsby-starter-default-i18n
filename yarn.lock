@@ -2941,8 +2941,8 @@ gatsby-cli@^1.1.10:
     yurnalist "^0.2.1"
 
 gatsby-link@^1.6.21:
-  version "1.6.21"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.6.21.tgz#7cdbb533f41b80db548cf0cbda4725789facd2f7"
+  version "1.6.30"
+  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.6.30.tgz#d75a7ceaa9e138b5f4f64cc6dbf1e0632876bd09"
   dependencies:
     babel-runtime "^6.26.0"
     prop-types "^15.5.8"
